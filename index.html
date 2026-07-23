@@ -3,15 +3,48 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2240" />
+
+  <!-- Set theme + JS flag before first paint (no flash, graceful scroll-reveal) -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        // Dark is the default; only an explicit saved choice overrides it.
+        var saved = localStorage.getItem('theme');
+        d.setAttribute('data-theme', saved || 'dark');
+      } catch (e) {
+        d.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <title>Emre Cicekyurt · Machine Learning Engineer</title>
   <meta name="description"
-    content="Emre Çiçekyurt - AI/ML Researcher & Computer Engineer specializing in computational biology, natural language processing, and machine learning applications in healthcare and finance" />
+    content="Emre Cicekyurt, Machine Learning Engineer at the Barcelona Supercomputing Center (Alfonso Valencia's Lab). LLM fine-tuning, computational biology, protein modeling, NLP, and large-scale HPC training." />
+  <meta name="author" content="Emre Cicekyurt" />
   <meta name="keywords"
-    content="AI, machine learning, computational biology, NLP, BERT, metagenomics, cancer prediction, sentiment analysis, bioinformatics" />
-  <title>Emre Çiçekyurt - AI/ML Researcher & Computer Engineer</title>
-  <script type="module" crossorigin src="/assets/index-DU8Wlmtq.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CDxYw8fG.css">
+    content="Machine Learning Engineer, LLM, deep learning, computational biology, protein language models, NLP, BERT, bioinformatics, HPC, MareNostrum" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Emre Cicekyurt · Machine Learning Engineer" />
+  <meta property="og:description"
+    content="ML Engineer working on LLMs, protein modeling, and large-scale HPC training at the Barcelona Supercomputing Center." />
+
+  <!-- Favicon: monogram -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f2240'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/index-DplwDVtU.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D5KVgyX9.css">
 </head>
 
 <body>

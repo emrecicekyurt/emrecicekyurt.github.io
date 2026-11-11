@@ -4,26 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0f2240" />
+  <meta name="theme-color" content="#0b1416" />
 
-  <!-- Set theme + JS flag before first paint (no flash, graceful scroll-reveal) -->
+  <!-- Set theme before first paint (no flash) -->
   <script>
     (function () {
       var d = document.documentElement;
-      d.classList.add('js');
-      try {
-        // Dark is the default; only an explicit saved choice overrides it.
-        var saved = localStorage.getItem('theme');
-        d.setAttribute('data-theme', saved || 'dark');
-      } catch (e) {
-        d.setAttribute('data-theme', 'dark');
-      }
+      // Dark is the default; a choice made with the toggle overrides it.
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      d.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
     })();
   </script>
 
   <title>Emre Cicekyurt · Machine Learning Engineer</title>
   <meta name="description"
-    content="Emre Cicekyurt, Machine Learning Engineer at the Barcelona Supercomputing Center (Alfonso Valencia's Lab). LLM fine-tuning, computational biology, protein modeling, NLP, and large-scale HPC training." />
+    content="Emre Cicekyurt, Machine Learning Engineer at the Barcelona Supercomputing Center. Designing, building and training deep learning models, from custom architectures to fine-tuned LLMs, with multi-node GPU training on MareNostrum 5." />
   <meta name="author" content="Emre Cicekyurt" />
   <meta name="keywords"
     content="Machine Learning Engineer, LLM, deep learning, computational biology, protein language models, NLP, BERT, bioinformatics, HPC, MareNostrum" />
@@ -32,19 +28,25 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Emre Cicekyurt · Machine Learning Engineer" />
   <meta property="og:description"
-    content="ML Engineer working on LLMs, protein modeling, and large-scale HPC training at the Barcelona Supercomputing Center." />
+    content="ML Engineer designing, building and training deep learning models at the Barcelona Supercomputing Center." />
+  <meta property="og:image" content="https://emrecicekyurt.github.io/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Emre Cicekyurt, Machine Learning Engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://emrecicekyurt.github.io/og-image.png" />
 
   <!-- Favicon: monogram -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f2240'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1416'/%3E%3Ctext x='16' y='21.5' font-family='Menlo,monospace' font-weight='600' font-size='14' fill='%232dd4bf' text-anchor='middle'%3EEC%3C/text%3E%3C/svg%3E" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet" />
-  <script type="module" crossorigin src="/assets/index-DplwDVtU.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D5KVgyX9.css">
+  <script type="module" crossorigin src="/assets/index-BUQguI6n.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BI7lKaXs.css">
 </head>
 
 <body>
